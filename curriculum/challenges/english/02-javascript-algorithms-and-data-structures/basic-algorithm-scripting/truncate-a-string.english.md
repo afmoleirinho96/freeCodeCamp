@@ -64,15 +64,13 @@ truncateString("A-tisket a-tasket A green and yellow basket", 8);
 
 ```js
 function truncateString(str, num) {
-  if (num >= str.length) {
-    return str;
-  }
-
-  return str.slice(0, num) + '...';
+  
+  let result=str;
+  if(str.length > num){result = str.replace(str, str.substring(0,num) +"...");}
+  return result;
 }
 
-truncateString("A-tisket a-tasket A green and yellow basket", 8);
-
+truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length);
 ```
 
 </section>
